@@ -1,11 +1,13 @@
 package com.example.salma
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Space
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -15,7 +17,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -23,6 +27,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
@@ -43,101 +48,92 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun demo() {
-    Column(modifier = Modifier.fillMaxSize()) {
+fun demo(){
+
+    val mContext= LocalContext.current
+
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .padding(20.dp)){
         Text(
             text = "Hello World",
-            color = Color.Black,
-            fontSize = 30.sp,
-            fontStyle = FontStyle.Italic, textDecoration = TextDecoration.Underline,
-        )
-        Spacer(modifier = Modifier.height(20.dp))
-        Text(
-            text = "I am Android Developer", color = Color.Green,
-            fontSize = 30.sp,
-            fontStyle = FontStyle.Normal, textDecoration = TextDecoration.LineThrough,
-        )
-        Spacer(modifier = Modifier.height(20.dp))
-        Text(
-            text = "This is my first app",
-            color = Color.Blue,
-            fontSize = 30.sp,
-            fontStyle = FontStyle.Italic, textDecoration = TextDecoration.None,
-        )
-        Spacer(modifier = Modifier.height(20.dp))
-        Text(
-            text = "Welcome All",
             color = Color.Red,
             fontSize = 30.sp,
-            fontStyle = FontStyle.Normal, textDecoration = TextDecoration.Underline,
+            fontStyle = FontStyle.Italic,
+            textDecoration = TextDecoration.Underline
         )
-        Spacer(modifier = Modifier.height(30.dp))
+        Spacer(modifier = Modifier.height(20.dp))
+        Text(
+            text = "Welcome to Android",
+            color = Color.Magenta,
+            fontFamily = FontFamily.SansSerif,
+            fontSize = 40.sp
+        )
+        Spacer(modifier = Modifier.height(20.dp))
+        Text(text = "Kotlin",
+            color = Color.Blue,
+            fontSize = 40.sp,
+            fontFamily = FontFamily.Cursive
+        )
+        Spacer(modifier = Modifier.height(20.dp))
+        Text(
+            text = "Jetpack Compose",
+            color = Color.Green,
+            fontSize = 40.sp,
+            fontStyle = FontStyle.Normal
+        )
+        Divider()
+        Spacer(modifier = Modifier.height(50.dp))
 
-        Row(modifier = Modifier.fillMaxSize()) {
-            Text(
-                text = "first",
-                color = Color.Black,
-                fontSize = 30.sp,
-                fontStyle = FontStyle.Italic, textDecoration = TextDecoration.Underline,
-            )
-            Spacer(modifier = Modifier.width(20.dp))
-            Text(
-                text = "Hello", color = Color.Green,
-                fontSize = 30.sp,
-                fontStyle = FontStyle.Normal, textDecoration = TextDecoration.LineThrough,
-            )
-            Spacer(modifier = Modifier.width(20.dp))
-            Text(
-                text = "App",
-                color = Color.Blue,
-                fontSize = 30.sp,
-                fontStyle = FontStyle.Italic, textDecoration = TextDecoration.None,
-            )
-            Spacer(modifier = Modifier.width(20.dp))
-            Text(
-                text = "Welcome",
-                color = Color.Red,
-                fontSize = 30.sp,
-                fontStyle = FontStyle.Normal,
-                fontFamily = FontFamily.SansSerif,
-                textDecoration = TextDecoration.Underline,
-            )
+        Row {
+           Text(text = "Text1", fontSize = 30.sp)
+           Spacer(modifier = Modifier.width(50.dp))
+           Text(text = "Text2", fontSize = 30.sp)
         }
-        Button(
-            onClick = { /*TODO*/ },
-            shape = RectangleShape,
-            colors = ButtonDefaults.buttonColors(Color.Magenta)
-        ) {
-            Text(text = "Click Me")
-
+        Spacer(modifier = Modifier.width(50.dp))
+        Row {
+            Text(text = "eMobilis", fontSize = 30.sp, color = Color.Gray)
+            Spacer(modifier = Modifier.height(50.dp))
+            Text(text = "Technology", fontSize = 30.sp)
+            Spacer(modifier = Modifier.height(50.dp))
         }
 
-        Button(
-            onClick = { /*TODO*/ },
-            shape = CutCornerShape(5.dp),
-            colors = ButtonDefaults.buttonColors(Color.Yellow)
-        ) {
-
-            Image(painter = painterResource(id = R.drawable.img_7), contentDescription = "")
-            Text(
-                text = "Add to Cart",
-                modifier = Modifier.padding(start = 10.dp)
-            )
-
-        }
-
-        Button(onClick = { /*TODO*/ }, shape = CutCornerShape(5.dp),
-            border = BorderStroke(3.dp, Color.Blue),
-            colors = ButtonDefaults.outlinedButtonColors())
-        {
-            Text(text = "Bordered button")
-        }
-
-
+    Box {
+       Text(text = "Yes")
+        Spacer(modifier = Modifier.height(20.dp))
+       Text(text = "No")
     }
-
+    //Button
+    Button(onClick = { /*TODO*/ },
+        shape = RectangleShape,
+        colors = ButtonDefaults.buttonColors(Color.Magenta)) {
+        Text(text = "Click Me")
+    }
+    Button(onClick = { /*TODO*/ },
+        shape = CutCornerShape(10.dp),
+        colors = ButtonDefaults.buttonColors(Color.Cyan)) {
+        Image(painter = painterResource(id = R.drawable.img_7), contentDescription ="" )
+        Text(text = "Add to Cart", modifier = Modifier.padding(start = 10.dp), fontSize = 15.sp ,color = Color.Black)
+    }
+    Button(onClick = { /*TODO*/ },
+        shape = CutCornerShape(5.dp),
+        border = BorderStroke(3.dp, Color.Red),
+        colors = ButtonDefaults.outlinedButtonColors()) {
+        Text(text = "Bordered Button")
+    }
+        Spacer(modifier = Modifier.height(20.dp))
+        //Intent
+        Button(onClick = {
+                         mContext.startActivity(Intent(mContext,ImageActivity::class.java))
+        },
+            shape = CutCornerShape(5.dp),
+            colors = ButtonDefaults.buttonColors(Color.DarkGray),
+            modifier = Modifier.padding(start= 150.dp)) {
+            Text(text = "Next", color = Color.White, fontSize = 20.sp)
+        }
 }
 
+}
 @Preview(showBackground = true)
 @Composable
 fun DemoPreview(){

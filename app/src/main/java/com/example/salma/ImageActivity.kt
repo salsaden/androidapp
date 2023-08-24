@@ -1,5 +1,6 @@
 package com.example.salma
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -12,6 +13,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.CutCornerShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -20,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
@@ -40,7 +45,12 @@ class ImageActivity : ComponentActivity() {
 
 @Composable
 fun myimage() {
-    Column(modifier = Modifier.fillMaxSize().padding(10.dp)) {
+
+    val mContext= LocalContext.current
+
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .padding(10.dp)) {
         Text(
             text = "BREEDS OF DOGS",
             fontSize = 30.sp,
@@ -49,7 +59,7 @@ fun myimage() {
             modifier = Modifier.padding(start = 50.dp),
             fontWeight = FontWeight.Bold
         )
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(10.dp))
 
         //First row
         Row {
@@ -66,15 +76,17 @@ fun myimage() {
             }
 
         }
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(10.dp))
 
         // Second row
         Row {
             Image(
                 painter = painterResource(id = R.drawable.img_6),
                 contentDescription = "bulldog",
-                modifier = Modifier.size(width = 200.dp, height = 150.dp)
-                    .clip(shape = CircleShape) .padding(10.dp),
+                modifier = Modifier
+                    .size(width = 200.dp, height = 150.dp)
+                    .clip(shape = CircleShape)
+                    .padding(10.dp),
                 contentScale = ContentScale.Crop
             )
 
@@ -84,7 +96,7 @@ fun myimage() {
 
             }
         }
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(10.dp))
 
         //Third row
         Row {
@@ -102,13 +114,26 @@ fun myimage() {
 
         }
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(10.dp))
         
         //Circular image
         Image(painter = painterResource(id = R.drawable.img),
             contentDescription = "image",
-            modifier = Modifier.size(200.dp).clip(shape = CircleShape),
+            modifier = Modifier
+                .size(200.dp)
+                .clip(shape = CircleShape),
         contentScale = ContentScale.Crop)
+        
+        Spacer(modifier = Modifier.height(10.dp))
+        Button(onClick = {
+            mContext.startActivity(Intent(mContext,ScrollActivity::class.java))
+        },
+            shape = CutCornerShape(5.dp),
+            modifier = Modifier.padding(start = 150.dp),
+            colors = ButtonDefaults.buttonColors(Color.Blue)) {
+            Text(text = "Next")
+        }
+        
         
 
       

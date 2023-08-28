@@ -104,10 +104,13 @@ fun demo(){
        Text(text = "No")
     }
     //Button
-    Button(onClick = { /*TODO*/ },
+    Button(onClick = {
+        mContext.startActivity(Intent(mContext,FormActivity::class.java))
+
+    },
         shape = RectangleShape,
         colors = ButtonDefaults.buttonColors(Color.Magenta)) {
-        Text(text = "Click Me")
+        Text(text = "Form")
     }
     Button(onClick = { /*TODO*/ },
         shape = CutCornerShape(10.dp),

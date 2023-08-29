@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -59,7 +60,7 @@ fun myimage() {
     val mContext= LocalContext.current
 
     Column(modifier = Modifier
-        .fillMaxSize()) {
+        .fillMaxSize() .background(Color.Gray)) {
         //TopAppBar
         TopAppBar(title = { Text(text = "About", color = Color.Blue, fontSize = 25.sp, fontWeight = FontWeight.Bold)},
             colors = TopAppBarDefaults.largeTopAppBarColors(Color.Cyan),

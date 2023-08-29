@@ -118,11 +118,14 @@ fun demo(){
         Image(painter = painterResource(id = R.drawable.img_7), contentDescription ="" )
         Text(text = "Add to Cart", modifier = Modifier.padding(start = 10.dp), fontSize = 15.sp ,color = Color.Black)
     }
-    Button(onClick = { /*TODO*/ },
+    Button(onClick = {
+        mContext.startActivity(Intent(mContext,IntentActivity::class.java))
+
+    },
         shape = CutCornerShape(5.dp),
         border = BorderStroke(3.dp, Color.Red),
         colors = ButtonDefaults.outlinedButtonColors()) {
-        Text(text = "Bordered Button")
+        Text(text = "Go to Intents")
     }
         Spacer(modifier = Modifier.height(20.dp))
         //Intent

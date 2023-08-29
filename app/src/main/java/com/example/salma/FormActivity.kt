@@ -114,74 +114,86 @@ fun myForm(){
                 modifier = Modifier.size(100.dp))
 
         }
-        //Name
-        TextField(value = name,
-            onValueChange ={name=it},
-            modifier = Modifier
-                .size(width = 350.dp, height = 50.dp)
-                .padding(start = 10.dp),
-            label = { Text(text = "Name", fontWeight = FontWeight.Bold)},
-            placeholder = { Text(text = "Enter your name")},
-            leadingIcon = { Icon(imageVector = Icons.Default.Person, contentDescription = "")},
-            trailingIcon = {Icon(imageVector = Icons.Default.Check, contentDescription = "")},
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
-        )
-        //Email
-        Spacer(modifier = Modifier.height(10.dp))
-        TextField(value = email,
-            onValueChange ={email=it},
-            modifier = Modifier
-                .size(width = 350.dp, height = 50.dp)
-                .padding(start = 10.dp),
-            label = { Text(text = "Email", fontWeight = FontWeight.Bold)},
-            placeholder = { Text(text = "Enter your email")},
-            leadingIcon = { Icon(imageVector = Icons.Default.Email, contentDescription = "")},
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email)
-        )
-        //Password
-        Spacer(modifier = Modifier.height(10.dp))
-        TextField(value = password,
-            onValueChange ={password=it},
-            modifier = Modifier
-                .size(width = 350.dp, height = 50.dp)
-                .padding(start = 10.dp),
-            label = { Text(text = "Password", fontWeight = FontWeight.Bold)},
-            placeholder = { Text(text = "Type your password")},
-            leadingIcon = { Icon(imageVector = Icons.Default.Lock, contentDescription = "")},
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-            visualTransformation = PasswordVisualTransformation()
-        )
-        //Phonumber
-        Spacer(modifier = Modifier.height(10.dp))
-        TextField(value = phonenumber,
-            onValueChange ={phonenumber=it},
-            modifier = Modifier
-                .size(width = 350.dp, height = 50.dp)
-                .padding(start = 10.dp),
-            label = { Text(text = "Contact", fontWeight = FontWeight.Bold)},
-            placeholder = { Text(text = "Enter your phonenumber")},
-            leadingIcon = { Icon(imageVector = Icons.Default.Call, contentDescription = "")},
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone)
-        )
-        Spacer(modifier = Modifier.height(10.dp))
-        Button(onClick = { /*TODO*/ },
-            modifier = Modifier
-                .size(width = 350.dp, height = 50.dp)
-                .padding(start = 10.dp),
-            shape = CutCornerShape(5.dp),
-            colors = ButtonDefaults.buttonColors(Color.Cyan)) {
 
-            Text(text = "Register",
-                color = Color.Black,
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Bold)
-        }
-        Spacer(modifier = Modifier.height(15.dp))
-        Text(text = "Already have an account?  Login",
-            fontWeight = FontWeight.Bold,
-            fontSize = 15.sp,
-            color= Color.Blue,
-            modifier = Modifier.padding(50.dp))
+            //Name
+            TextField(
+                value = name,
+                onValueChange = { name = it },
+                modifier = Modifier
+                    .size(width = 350.dp, height = 50.dp)
+                    .padding(start = 10.dp),
+                label = { Text(text = "Name", fontWeight = FontWeight.Bold) },
+                placeholder = { Text(text = "Enter your name") },
+                leadingIcon = { Icon(imageVector = Icons.Default.Person, contentDescription = "") },
+                trailingIcon = { Icon(imageVector = Icons.Default.Check, contentDescription = "") },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
+            )
+            //Email
+            Spacer(modifier = Modifier.height(10.dp))
+            TextField(
+                value = email,
+                onValueChange = { email = it },
+                modifier = Modifier
+                    .size(width = 350.dp, height = 50.dp)
+                    .padding(start = 10.dp),
+                label = { Text(text = "Email", fontWeight = FontWeight.Bold) },
+                placeholder = { Text(text = "Enter your email") },
+                leadingIcon = { Icon(imageVector = Icons.Default.Email, contentDescription = "") },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email)
+            )
+            //Password
+            Spacer(modifier = Modifier.height(10.dp))
+            TextField(
+                value = password,
+                onValueChange = { password = it },
+                modifier = Modifier
+                    .size(width = 350.dp, height = 50.dp)
+                    .padding(start = 10.dp),
+                label = { Text(text = "Password", fontWeight = FontWeight.Bold) },
+                placeholder = { Text(text = "Type your password") },
+                leadingIcon = { Icon(imageVector = Icons.Default.Lock, contentDescription = "") },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+                visualTransformation = PasswordVisualTransformation()
+            )
+            //Phonumber
+            Spacer(modifier = Modifier.height(10.dp))
+            TextField(
+                value = phonenumber,
+                onValueChange = { phonenumber = it },
+                modifier = Modifier
+                    .size(width = 350.dp, height = 50.dp)
+                    .padding(start = 10.dp),
+                label = { Text(text = "Contact", fontWeight = FontWeight.Bold) },
+                placeholder = { Text(text = "Enter your phonenumber") },
+                leadingIcon = { Icon(imageVector = Icons.Default.Call, contentDescription = "") },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone)
+            )
+            Spacer(modifier = Modifier.height(10.dp))
+            Button(
+                onClick = { /*TODO*/ },
+                modifier = Modifier
+                    .size(width = 350.dp, height = 50.dp)
+                    .padding(start = 10.dp),
+                shape = CutCornerShape(5.dp),
+                colors = ButtonDefaults.buttonColors(Color.Cyan)
+            ) {
+
+                Text(
+                    text = "Register",
+                    color = Color.Black,
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            Spacer(modifier = Modifier.height(15.dp))
+            Text(
+                text = "Already have an account?  Login",
+                fontWeight = FontWeight.Bold,
+                fontSize = 15.sp,
+                color = Color.Blue,
+                modifier = Modifier.padding(50.dp)
+            )
+
 
     }
 

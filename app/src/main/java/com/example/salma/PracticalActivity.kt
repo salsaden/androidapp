@@ -237,7 +237,7 @@ fun work(){
             .horizontalScroll(rememberScrollState())) {
             Card() {
                 Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch1),
+                    Image(painter = painterResource(id = R.drawable.glass1),
                         contentDescription = "",
                         modifier = Modifier.size(180.dp))
 
@@ -259,7 +259,7 @@ fun work(){
             Spacer(modifier = Modifier.width(15.dp))
             Card() {
                 Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch1),
+                    Image(painter = painterResource(id = R.drawable.glass2),
                         contentDescription = "",
                         modifier = Modifier.size(180.dp))
 
@@ -281,7 +281,7 @@ fun work(){
             Spacer(modifier = Modifier.width(15.dp))
             Card() {
                 Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch2),
+                    Image(painter = painterResource(id = R.drawable.glass3),
                         contentDescription = "",
                         modifier = Modifier.size(180.dp))
 
@@ -303,7 +303,7 @@ fun work(){
             Spacer(modifier = Modifier.width(15.dp))
             Card() {
                 Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch3),
+                    Image(painter = painterResource(id = R.drawable.glass4),
                         contentDescription = "",
                         modifier = Modifier.size(180.dp))
 
@@ -325,7 +325,7 @@ fun work(){
             Spacer(modifier = Modifier.width(15.dp))
             Card() {
                 Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch4),
+                    Image(painter = painterResource(id = R.drawable.glass5),
                         contentDescription = "",
                         modifier = Modifier.size(180.dp))
 
@@ -579,7 +579,6 @@ fun work(){
 
         }
         //Row5
-            .
         Spacer(modifier = Modifier.height(15.dp))
         Row(modifier = Modifier
             .padding(start = 10.dp)
@@ -608,7 +607,7 @@ fun work(){
             Spacer(modifier = Modifier.width(15.dp))
             Card() {
                 Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch1),
+                    Image(painter = painterResource(id = R.drawable.torch2),
                         contentDescription = "",
                         modifier = Modifier.size(180.dp))
 
@@ -630,7 +629,7 @@ fun work(){
             Spacer(modifier = Modifier.width(15.dp))
             Card() {
                 Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch2),
+                    Image(painter = painterResource(id = R.drawable.torch3),
                         contentDescription = "",
                         modifier = Modifier.size(180.dp))
 

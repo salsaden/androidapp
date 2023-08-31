@@ -138,6 +138,15 @@ fun demo(){
             modifier = Modifier.padding(start= 150.dp)) {
             Text(text = "Next", color = Color.White, fontSize = 20.sp)
         }
+        //Splash
+        Button(onClick = {
+            mContext.startActivity(Intent(mContext,LottieAnimationActivity::class.java))
+        },
+            shape = CutCornerShape(5.dp),
+            colors = ButtonDefaults.buttonColors(Color.DarkGray),
+            modifier = Modifier.padding(start= 150.dp)) {
+            Text(text = "Splash", color = Color.White, fontSize = 20.sp)
+        }
 }
 
 }

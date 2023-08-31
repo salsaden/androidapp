@@ -5,4 +5,6 @@
     <string name="title_activity_form">FormActivity</string>
     <string name="title_activity_intent">IntentActivity</string>
     <string name="title_activity_practical">PracticalActivity</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="title_activity_lottie_animation">LottieAnimationActivity</string>
 </resources>

@@ -103,7 +103,7 @@ fun demo(){
         Spacer(modifier = Modifier.height(20.dp))
        Text(text = "No")
     }
-    //Button
+    //Buttons
     Button(onClick = {
         mContext.startActivity(Intent(mContext,FormActivity::class.java))
 
@@ -131,7 +131,7 @@ fun demo(){
         Spacer(modifier = Modifier.height(20.dp))
         //Intent
         Button(onClick = {
-                         mContext.startActivity(Intent(mContext,ImageActivity::class.java))
+            mContext.startActivity(Intent(mContext,ImageActivity::class.java))
         },
             shape = CutCornerShape(5.dp),
             colors = ButtonDefaults.buttonColors(Color.DarkGray),
@@ -145,7 +145,16 @@ fun demo(){
             shape = CutCornerShape(5.dp),
             colors = ButtonDefaults.buttonColors(Color.DarkGray),
             modifier = Modifier.padding(start= 150.dp)) {
-            Text(text = "Splash", color = Color.White, fontSize = 20.sp)
+            Text(text = "Lottie", color = Color.White, fontSize = 20.sp)
+        }
+        Button(onClick = {
+            mContext.startActivity(Intent(mContext,IntentActivity::class.java))
+
+        },
+            shape = CutCornerShape(5.dp),
+            border = BorderStroke(3.dp, Color.Red),
+            colors = ButtonDefaults.outlinedButtonColors()) {
+            Text(text = " Go to Intents")
         }
 }
 

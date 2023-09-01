@@ -1,5 +1,6 @@
 package com.example.salma
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
@@ -22,6 +23,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
@@ -34,12 +36,22 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.salma.ui.theme.SalmaTheme
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class LottieAnimationActivity : ComponentActivity() {
+    @SuppressLint("CoroutineCreationDuringComposition")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             myLottie()
+            val mContext= LocalContext.current
+            val coroutineScope= rememberCoroutineScope()
+            coroutineScope.launch(){
+                delay(1000)
+                mContext.startActivity(Intent(mContext,LoginActivity2::class.java))
+                finish()
+            }
 
         }
     }
@@ -79,7 +91,7 @@ fun myLottie(){
             }
         )
 
-        val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.animation_llyubp7a))
+        val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.animation_llyugwcm))
         val progress by animateLottieCompositionAsState(composition)
 
         LottieAnimation(composition,progress, modifier = Modifier.size(500.dp))

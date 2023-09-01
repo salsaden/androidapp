@@ -13,14 +13,17 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -52,7 +55,7 @@ class SplashScreenActivity : ComponentActivity() {
             val coroutineScope= rememberCoroutineScope()
             coroutineScope.launch(){
                 delay(1000)
-                mContext.startActivity(Intent(mContext,MainActivity::class.java))
+                mContext.startActivity(Intent(mContext,HomePageActivity::class.java))
                 finish()
             }
 
@@ -64,7 +67,9 @@ class SplashScreenActivity : ComponentActivity() {
 @Composable
 fun splash(){
      val mContext= LocalContext.current
-    Column(modifier = Modifier.fillMaxSize() .background(Color.Gray),
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .background(Color.Gray),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
 
@@ -77,6 +82,18 @@ fun splash(){
             fontSize = 60.sp,
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily.Cursive,
+            color = Color.Cyan
+        )
+        //CircularProgressIndicator
+        CircularProgressIndicator(
+            modifier = Modifier.size(70.dp),
+            color = Color.Black,
+            strokeWidth = 5.dp)
+
+        //LinearProgressIndicator
+        LinearProgressIndicator(
+            modifier = Modifier.padding(20.dp)
+                .height(10.dp),
             color = Color.Cyan
         )
 

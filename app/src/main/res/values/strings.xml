@@ -7,4 +7,6 @@
     <string name="title_activity_practical">PracticalActivity</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="title_activity_lottie_animation">LottieAnimationActivity</string>
+    <string name="title_activity_login2">LoginActivity2</string>
+    <string name="title_activity_home_page">HomePageActivity</string>
 </resources>

@@ -72,7 +72,7 @@ fun work(){
 
     Column(modifier = Modifier
         .fillMaxSize()
-        .verticalScroll(rememberScrollState())) {
+        ) {
         //TopAppBar
         TopAppBar(title = { Text(text = "JUMIA", color = Color.Black, fontSize = 25.sp, fontWeight = FontWeight.Bold)},
             colors = TopAppBarDefaults.largeTopAppBarColors(Color.Cyan),
@@ -114,585 +114,997 @@ fun work(){
         Text(text = "Do you want to shop?",
             fontSize = 15.sp, modifier = Modifier.padding(start = 10.dp)
          )
-        //Row1-Watches
-        Spacer(modifier = Modifier.height(15.dp))
-        Row(modifier = Modifier
-            .padding(start = 10.dp)
-            .horizontalScroll(rememberScrollState())) {
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch1),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+        Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+            //Row1-Watches
+            Spacer(modifier = Modifier.height(15.dp))
+            Row(
+                modifier = Modifier
+                    .padding(start = 10.dp)
+                    .horizontalScroll(rememberScrollState())
+            ) {
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch1),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch2),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch2),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch3),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch3),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch4),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch4),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch5),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch5),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
+
             }
+            //Row2
+            Spacer(modifier = Modifier.height(15.dp))
+            Row(
+                modifier = Modifier
+                    .padding(start = 10.dp)
+                    .horizontalScroll(rememberScrollState())
+            ) {
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.glass1),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-        }
-        //Row2
-        Spacer(modifier = Modifier.height(15.dp))
-        Row(modifier = Modifier
-            .padding(start = 10.dp)
-            .horizontalScroll(rememberScrollState())) {
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.glass1),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.glass2),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.glass2),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.glass3),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.glass3),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.glass4),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.glass4),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.glass5),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.glass5),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
+
             }
+            //Row3
+            Spacer(modifier = Modifier.height(15.dp))
+            Row(
+                modifier = Modifier
+                    .padding(start = 10.dp)
+                    .horizontalScroll(rememberScrollState())
+            ) {
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch1),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-        }
-        //Row3
-        Spacer(modifier = Modifier.height(15.dp))
-        Row(modifier = Modifier
-            .padding(start = 10.dp)
-            .horizontalScroll(rememberScrollState())) {
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch1),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch1),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch1),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch2),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch2),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch3),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch3),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch4),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch4),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
+
             }
+            //Row4
+            Spacer(modifier = Modifier.height(15.dp))
+            Row(
+                modifier = Modifier
+                    .padding(start = 10.dp)
+                    .horizontalScroll(rememberScrollState())
+            ) {
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch1),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-        }
-        //Row4
-        Spacer(modifier = Modifier.height(15.dp))
-        Row(modifier = Modifier
-            .padding(start = 10.dp)
-            .horizontalScroll(rememberScrollState())) {
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch1),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch1),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch1),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch2),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch2),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch3),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch3),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch4),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch4),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
+
             }
+            //Row5
+            Spacer(modifier = Modifier.height(15.dp))
+            Row(
+                modifier = Modifier
+                    .padding(start = 10.dp)
+                    .horizontalScroll(rememberScrollState())
+            ) {
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch1),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-        }
-        //Row5
-        Spacer(modifier = Modifier.height(15.dp))
-        Row(modifier = Modifier
-            .padding(start = 10.dp)
-            .horizontalScroll(rememberScrollState())) {
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch1),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch2),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch2),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch3),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch3),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch3),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch3),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.width(15.dp))
-            Card() {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Image(painter = painterResource(id = R.drawable.torch4),
-                        contentDescription = "",
-                        modifier = Modifier.size(180.dp))
+                Spacer(modifier = Modifier.width(15.dp))
+                Card() {
+                    Column(modifier = Modifier.padding(10.dp)) {
+                        Image(
+                            painter = painterResource(id = R.drawable.torch4),
+                            contentDescription = "",
+                            modifier = Modifier.size(180.dp)
+                        )
 
-                    Text(text = "Name: Flashlight", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Origin: Yorkshire", fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "Price: Ksh. 7,000", fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = "Name: Flashlight",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Origin: Yorkshire",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Price: Ksh. 7,000",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.Bold
+                        )
 
-                    Button(onClick = {
-                        val simToolKitLaunchIntent =
-                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                        simToolKitLaunchIntent?.let { mContext.startActivity(it) }
-                    },
-                        colors = ButtonDefaults.buttonColors(Color.Green),
-                        shape = RectangleShape) {
-                        Text(text = "Buy")
+                        Button(
+                            onClick = {
+                                val simToolKitLaunchIntent =
+                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it) }
+                            },
+                            colors = ButtonDefaults.buttonColors(Color.Green),
+                            shape = RectangleShape
+                        ) {
+                            Text(text = "Buy")
+                        }
                     }
                 }
-            }
 
+            }
         }
 
     }

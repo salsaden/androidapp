@@ -1,5 +1,6 @@
 package com.example.salma
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -41,6 +42,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -58,8 +60,11 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.salma.ui.theme.SalmaTheme
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class FormActivity : ComponentActivity() {
+    @SuppressLint("CoroutineCreationDuringComposition")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -111,14 +116,15 @@ fun myForm(){
             modifier = Modifier.padding(30.dp)
         )
        Spacer(modifier = Modifier.height(10.dp))
-//        Box(modifier = Modifier.fillMaxWidth(),
-//            contentAlignment = Alignment.Center) {
-//            Image(painter = painterResource(id = R.drawable.img_32),
-//                contentDescription = "",
-//                modifier = Modifier.size(100.dp))
-//
-//        }
-        val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.animation_llyubp7a))
+        Box(modifier = Modifier.fillMaxWidth(),
+            contentAlignment = Alignment.Center) {
+            Image(painter = painterResource(id = R.drawable.img_32),
+                contentDescription = "",
+                modifier = Modifier.size(100.dp))
+
+        }
+        //LottieAnimation
+        val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.signup))
         val progress by animateLottieCompositionAsState(composition)
         Box(modifier = Modifier.fillMaxWidth(),
            contentAlignment = Alignment.Center) {
@@ -180,7 +186,10 @@ fun myForm(){
             )
             Spacer(modifier = Modifier.height(10.dp))
             Button(
-                onClick = { /*TODO*/ },
+                onClick = {
+                    mContext.startActivity(Intent(mContext,LottieAnimationActivity::class.java))
+
+                },
                 modifier = Modifier
                     .size(width = 350.dp, height = 50.dp)
                     .padding(start = 10.dp),
